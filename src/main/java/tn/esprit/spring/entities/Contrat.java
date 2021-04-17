@@ -34,7 +34,7 @@ public class Contrat implements Serializable {
 	
 	@Transient 
 	private float telephone;
-	
+	//haithem commit haithem-maangement
 	@JsonIgnore
 	//@JsonBackReference
 	@OneToOne(mappedBy="contrat")
