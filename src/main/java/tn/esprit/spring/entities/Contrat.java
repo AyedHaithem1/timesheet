@@ -25,7 +25,7 @@ public class Contrat implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	//@SequenceGenerator(name="seq")
 	private int reference;
-	
+	//haithem commit
 	@Temporal(TemporalType.DATE)
 	private Date dateDebut;
 	
