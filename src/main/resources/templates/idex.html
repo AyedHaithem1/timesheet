@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>employe Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>employe List</h1>
+    <a href="/new">Create New Employe</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>actif</th>
+                <th>email</th>
+                <th>nom</th>
+                <th>password</th>
+                <th>prenom</th>
+                <th>role</th>
+                <th>contrat_reference</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employe : ${listEmp}">
+                <td th:text="${employe.id}">employe ID</td>
+                <td th:text="${employe.email}">email</td>
+                <td th:text="${employe.nom}">nom</td>
+                <td th:text="${employe.password}">password</td>
+                <td th:text="${employe.role}">role</td>
+ 				<td th:text="${employe.contrat_reference}">contrat_reference</td>
+                
+                <td>
+                    <a th:href="/@{'/edit/' + ${employe.id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="/@{'/delete/' + ${employe.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>
