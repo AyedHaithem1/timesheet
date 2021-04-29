@@ -32,7 +32,7 @@ public class Employe implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	//@SequenceGenerator(name="seq")
 	private int id;
-	
+	/*employe*/
 	private String prenom;
 	
 
